@@ -12,7 +12,7 @@ zu finden.
 
 [`main.pdf`](main.pdf)
 
-Und mit Notizen
+Und mit Notizen (für die Präsentation ist [pympress](https://github.com/Cimbali/pympress) empfehlenswert)
 
 [`main_notes.pdf`](main_notes.pdf)
 
