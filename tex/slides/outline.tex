@@ -3,13 +3,16 @@
 \begin{frame}
 \frametitle{\secname}
 \renewcommand{\baselinestretch}{0.65}\normalsize
-\tableofcontents[hideallsubsections]
+% XXX To Hide subsections uncoment
+\tableofcontents
+%\tableofcontents[hideallsubsections]
 \renewcommand{\baselinestretch}{1.0}\normalsize
 
-\note[item]{??}
+\note[item]{You can modify the outline in "tex/slides/outline", eg. exclude subsections}
+\note[item]{By enabling the AtBeginSection code a preview outline of each section is shown.}
 \end{frame}
 
-% Display subsection outline
+% XXX Display subsection outline
 \iflong{
 \AtBeginSection[]
 {

@@ -1,0 +1,63 @@
+\subsection{Multiple Images}
+
+\begin{iframe}
+    \framesubtitle{subfigures}
+	\begin{itemize}
+		\item as aboves
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\begin{subfigure}[b]{0.49\textwidth}
+		    \centering
+		     \includegraphics[width=\textwidth]{example-image-a}
+		\end{subfigure}
+		\hfill
+		\centering
+		\begin{subfigure}[b]{0.49\textwidth}
+		    \centering
+		     \includegraphics[width=\textwidth]{example-image-a}
+		\end{subfigure}   
+	   \end{figure}
+		\begin{itemize}
+			\item so
+			\item below 
+		\end{itemize}
+	   \inote{scale at M}
+	   \inote{$\sqrt{s}= 13$}
+\end{iframe}
+
+\begin{iframe}
+\framesubtitle{isplit}
+\centering
+\hfill
+\hfill
+\hfill
+Image 1\footfullcite{Reference 1}
+\hfill
+\hfill
+\hfill
+Image 2\footfullcite{Reference 2}
+\hfill
+\isplit[0.66]{
+	\centering
+    \includegraphics[width=0.8\linewidth]{example-image-a}
+}
+{
+	\centering
+    \includegraphics[width=0.80\linewidth]{example-image-a}
+	\begin{equation*}
+		\Gamma^\mu_\text{eik} = g_s T^j \frac{\Delta_i v^\mu}{\delta_i v \cdot k + i \epsilon}
+	\end{equation*}
+}
+\inote{have you replaced the example images?}
+\end{iframe}
+
+\begingroup
+\setbeamertemplate{footline}{}
+\subsection{Huge Image with no Footline}
+\begin{iframe}
+    \centering
+    \includegraphics[height=0.99\textheight]{example-image-a}
+	\inote{Here we remove the footline, since it is drawn on large images otherwise.}
+\end{iframe}
+\endgroup
