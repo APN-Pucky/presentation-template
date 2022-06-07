@@ -8,9 +8,13 @@ unter
 
 zu finden.
 
-## Example resulting pdf:
+## Example pdf:
 
 [`main.pdf`](main.pdf)
+
+Und mit Notizen
+
+[`main_notes.pdf`](main_notes.pdf)
 
 ## Overleaf mirror
 
