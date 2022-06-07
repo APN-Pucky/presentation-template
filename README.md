@@ -18,5 +18,5 @@ Zur Verwendung der Vorlage wird die Schriftart „Meta Office Pro“ von FontFon
 - MetaScOffcPro-Norm.ttf
 - MetaScOffcPro-NormIta.ttf
 
-im Verzeichnis [`fonts/`](tex/fonts/) abgelegt werden.
+im Verzeichnis [`fonts/`](fonts/) abgelegt werden.
 

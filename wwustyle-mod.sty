@@ -58,6 +58,13 @@
 % use \providecolor instead of \definecolor so that predefined colors are not
 % overwritten (e.g. white, which would be overwritten by something not white!)
 \let\definecolor=\providecolor
+% location option
+\newcommand{\insertlocation}{}
+\newcommand{\location}[1]{%
+  \renewcommand{\insertlocation}{#1}
+}
+
+
 
 % load wwustyle
 \RequirePackage@saved{wwustyle}
@@ -159,11 +166,11 @@
 		\selectfont%
 		\color{maincolor}%
 		\rule{\textwidth}{0.8pt}% horizontal line
-		\vskip4mm%
+		\vskip2mm%
 		\hspace{5mm}%
 		% fix frame numbering (use \insertframenumber instead of \thepage)
-		\textcolor{wwublack}{\let\bgbox\relax\insertshortauthor}\hfill\textcolor{maincolor}{\fontsize{9pt}{12pt}\selectfont\smash{\textbf{\insertframenumber}}}\hspace{5mm}\strut%
-		\vskip4mm%
+		\textcolor{wwublack}{\let\bgbox\relax\insertshortauthor}\hfill\textcolor{wwublack}{\let\bgbox\relax\insertlocation}\hfill\textcolor{wwublack}{\let\bgbox\relax\insertdate}\hfill\textcolor{maincolor}{\fontsize{9pt}{12pt}\selectfont\smash{\textbf{\insertframenumber}}}\hspace{5mm}\strut%
+		\vskip2mm%
 	\end{beamercolorbox}%
 }
 
@@ -176,24 +183,25 @@
 
 % fix positioning of title in headline
 \setbeamertemplate{headline}{
-	\fontsize{6pt}{1pt}
-	\selectfont
-	{
-		\skipexternalization
-		\begin{tikzpicture}[remember picture, overlay]
-			\node[xshift=0.54cm,yshift=-1.21cm,
-			anchor=south west,
-			inner sep=0] at (current page.north west) {\logoHeadline};
-			\node[xshift=3.5cm,yshift=-1.21cm,
-			anchor=south west,
-			inner sep=0] at (current page.north west) {\@institutelogosmall};
-		\end{tikzpicture}
-	}
-	\hfill
-	\textbf{\color{maincolor}\let\bgbox\relax\insertshorttitle}%
-	% same space to the right as text margin
-	\hspace{0.5cm}%
-	\rule{0pt}{12mm}%
+	%\fontsize{6pt}{1pt}
+	%\selectfont
+	%{
+	%	\skipexternalization
+	%	\begin{tikzpicture}[remember picture, overlay]
+	%		\node[xshift=0.54cm,yshift=-0.90cm,
+	%		anchor=south west,
+	%		inner sep=0] at (current page.north west) {\logoHeadline};
+	%		\node[xshift=3.5cm,yshift=-0.90cm,
+	%		anchor=south west,
+	%		inner sep=0] at (current page.north west) {\@institutelogosmall};
+	%	\end{tikzpicture}
+	%}
+	%\hfill
+	%\textbf{\color{maincolor}\let\bgbox\relax\insertshorttitle}%
+	%% same space to the right as text margin
+	%\hspace{0.5cm}%
+	%\vskip8mm%
+	%{\color{maincolor}\rule{\textwidth}{0.8pt}}%
 }
 
 % fix \frametitle and add output for \framesubtitle
@@ -215,3 +223,5 @@
 	\insertframesubtitle
 	\fi%
 }
+
+\setbeamertemplate{frametitle}[default][center]

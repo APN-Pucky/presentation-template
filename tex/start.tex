@@ -1,0 +1,24 @@
+
+%\iflong{\tikzexternalize[prefix=_tikzexternalize-long/]}
+%\ifnotlong{\tikzexternalize[prefix=_tikzexternalize-main/]}
+\title[\secname]{TITLE}
+	
+
+%\subtitle{Untertitel}
+% \subject wird von der Vorlage nicht direkt verwendet
+%\subject{Thema}
+% Autor angeben
+\author{AUTHOR} 
+\authors{\underline{AUTHOR1}, AUTHOR2} 
+
+\location{LOCATION} 
+% \institute wird von der Vorlage nicht direkt verwendet
+%\institute{Fachschaft Physik}
+
+\date{\today}
+%\keywords{Münster, Fachschaft Physik}
+
+\bibliography{References.bib}
+\begin{document}
+\subimport{tex/slides/}{_}
+\end{document}
