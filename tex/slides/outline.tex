@@ -1,0 +1,24 @@
+
+\section*{\ifger{Gliederung}{Outline}}
+\begin{frame}
+\frametitle{\secname}
+\renewcommand{\baselinestretch}{0.65}\normalsize
+\tableofcontents[hideallsubsections]
+\renewcommand{\baselinestretch}{1.0}\normalsize
+
+\note[item]{??}
+\end{frame}
+
+% Display subsection outline
+\iflong{
+\AtBeginSection[]
+{
+	\begin{frame}
+	\frametitle{\ifger{Gliederung}{Outline}}
+	\renewcommand{\baselinestretch}{0.65}\normalsize
+	\tableofcontents[currentsection,hideallsubsections]
+	%\tableofcontents[currentsection,currentsubsection,hideothersubsections]
+	\renewcommand{\baselinestretch}{1.0}\normalsize
+	\end{frame}
+}
+}
