@@ -8,6 +8,10 @@ unter
 
 zu finden.
 
+## Example resulting pdf:
+
+[`main.pdf`](main.pdf)
+
 ## Overleaf mirror
 
 <https://www.overleaf.com/read/gvrkrwkndwyx>
