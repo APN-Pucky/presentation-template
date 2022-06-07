@@ -1,0 +1,116 @@
+
+
+\newif\iflongb
+\longbfalse
+
+\newcommand{\iflong}[1]{\iflongb #1\else \fi}
+\newcommand{\ifnotlong}[1]{\iflongb \else #1 \fi}
+
+
+\newcommand{\ifger}[2]{#2}
+
+\def \speeditup {1}
+\newcommand{\speed}[1]{%
+  \ifthenelse{0=\speeditup}{#1}{}
+}
+\newcommand{\isplit}[3][0.48]{
+\begin{columns}[T]
+  \begin{column}{#1\linewidth}
+    #2
+\end{column}
+  \begin{column}{\fpeval{0.98-#1}\linewidth}
+    #3
+\end{column}
+\end{columns}
+}
+\newcommand{\ilsplit}[3][0.48]{
+\begin{columns}[T]
+  \begin{column}{#1\linewidth}
+    #2
+\end{column}
+%\hspace{-40pt}
+\vrule{}
+\hspace{10pt}
+  \begin{column}{\fpeval{0.98-#1}\linewidth}
+    #3
+\end{column}
+\end{columns}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              \iframe                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO instead of copy paste reuse iframe env.
+\newcommand{\ialignment}{c}
+\newcommand{\iframetitle}{\centering \subsecname}
+
+\newenvironment{iframe}[1][0pt]{
+  \begin{frame}[\ialignment]{\iframetitle}
+    \vspace{#1}
+}{\end{frame}}
+
+\newenvironment{icframe}[1][0pt]{
+  \begin{frame}[c]{\centering \subsecname}
+    \vspace{#1}
+}{\end{frame}}
+
+\newenvironment{itframe}[1][0pt]{
+  \begin{frame}[t]{\centering \subsecname}
+    \vspace{#1}
+}{\end{frame}}
+
+% legacy iframe
+\newenvironment{iiframe}{
+	\begin{frame}[t]{\subsecname}
+  %\frametitle{\subsecname}
+  %\vspace{-25pt}
+
+}{\end{frame}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              \iequation                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{iequation}{
+	\begin{equation*}
+}{\end{equation*}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              \inote                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\inote}[1]{
+\note[item]{#1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              \ifigure                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ifigure}[2][1]{
+\begin{figure}[H]
+\includegraphics[width=#1\linewidth]{#2}
+%\includegraphics[height=\fpeval{0.8*#1}\textheight]{#2}
+\end{figure}
+}
+
+\newcommand{\avg}[1] {
+  \langle #1 \rangle
+}
+
+\newcommand{\prog}[1]{\texttt{#1}}
+\DeclareMathOperator{\sign}{sign}
+
+
+\definecolor{Gray}{gray}{0.9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              \arxivcite                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\DeclareCiteCommand{\arxivcite}[\mkbibbrackets]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \newunit
+   \usebibmacro{eprint}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+  \makeatother
