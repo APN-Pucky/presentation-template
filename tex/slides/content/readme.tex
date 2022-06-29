@@ -1,12 +1,24 @@
-\subsection{Options}
+
+\section{Options}
+\subsection{Description}
 \begin{iframe}
 There are several boolean flags set if one includes/imports/inputs various files in "/tex/conf/". Some default constellations are available via the default main files:
 
 \begin{description}
 \item[Notes:] show notes on second half of the slides.
-\item[Long:] include/exclude with \textbackslash iflong\{\},\textbackslash ifnotlong\{\}
-\item[Theme:] set in "/tex/conf/theme.tex"
-\item[Language:] English default (\textbackslash ifger\{de text\}\{en text\}, for bilingual)
-\item[Alignment:] 
+\item[Long:] include/exclude with \textbackslash iflong\{\},\textbackslash ifnotlong\{\}.
+\item[Theme:] switch in "/tex/conf/theme.tex".
+\item[Language:] English default (\textbackslash ifger\{de text\}\{en text\}, for bilingual).
+\item[Alignment:] \textbackslash itframe and \textbackslash icframe allow to switch between top and centered text alignment. Set the global behaviour with \textbackslash renewcommand\{\textbackslash ialignment\}\{t\} (default is c).
+\item[Font:] put "Meta Office Pro" "*.ttf" files in "font/" folder for WWU theme else resorts to the font theme "professionalfonts".
 \end{description}
 \end{iframe}
+
+\subsection{Application}
+\begingroup
+\renewcommand{\ialignment}{t}
+\renewcommand{\iframetitle}{\secname}
+\begin{iframe}[-10pt]
+	Here we adjusted \textbackslash renewcommand \{\textbackslash ialignment\}\{t\} and  \textbackslash renewcommand \{\textbackslash iframetitle\}\{\textbackslash secname\} to adjust alignment and the show the section as title.
+\end{iframe}
+\endgroup

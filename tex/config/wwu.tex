@@ -4,6 +4,13 @@
 % Einstellungen der Schriftart (Meta Office Pro) für Text und Mathematik
 % math**=sym angeben, damit auch diese Befehle die Schriftart Meta verwenden
 \usepackage[mathrm=sym, mathit=sym, mathsf=sym, mathbf=sym]{unicode-math}
+% Check if files exist else use other fonts
+\IfFileExists{fonts/MetaOffcPro-Bold.ttf}{
+\IfFileExists{fonts/MetaOffcPro-Norm.ttf}{
+\IfFileExists{fonts/MetaOffcPro-NormIta.ttf}{
+\IfFileExists{fonts/MetaScOffcPro-Bold.ttf}{
+\IfFileExists{fonts/MetaScOffcPro-Norm.ttf}{
+\IfFileExists{fonts/MetaScOffcPro-NormIta.ttf}{
 \setmainfont{MetaOffcPro}[Path=fonts/,
 Extension=.ttf,
 UprightFont=*-Norm,
@@ -38,6 +45,13 @@ BoldFeatures={
 BoldItalicFont=*-Bold,
 BoldItalicFeatures={FakeSlant},
 ]
+}{}
+}{}
+}{}
+}{}
+}{}
+}{}
+
 %\setmathfont{Latin Modern Math}
 %% Meta Office Pro für die Bereiche nutzen, für die Glyphen existieren
 %\setmathfont{MetaOffcPro-Norm.ttf}[Path=fonts/,
