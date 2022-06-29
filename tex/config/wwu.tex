@@ -5,13 +5,14 @@
 % math**=sym angeben, damit auch diese Befehle die Schriftart Meta verwenden
 \usepackage[mathrm=sym, mathit=sym, mathsf=sym, mathbf=sym]{unicode-math}
 % Check if files exist else use other fonts
-\IfFileExists{fonts/MetaOffcPro-Bold.ttf}{
-\IfFileExists{fonts/MetaOffcPro-Norm.ttf}{
-\IfFileExists{fonts/MetaOffcPro-NormIta.ttf}{
-\IfFileExists{fonts/MetaScOffcPro-Bold.ttf}{
-\IfFileExists{fonts/MetaScOffcPro-Norm.ttf}{
-\IfFileExists{fonts/MetaScOffcPro-NormIta.ttf}{
-\setmainfont{MetaOffcPro}[Path=fonts/,
+
+\IfFileExists{metaoffice-fonts/MetaOffcPro-Bold.ttf}{
+\IfFileExists{metaoffice-fonts/MetaOffcPro-Norm.ttf}{
+\IfFileExists{metaoffice-fonts/MetaOffcPro-NormIta.ttf}{
+\IfFileExists{metaoffice-fonts/MetaScOffcPro-Bold.ttf}{
+\IfFileExists{metaoffice-fonts/MetaScOffcPro-Norm.ttf}{
+\IfFileExists{metaoffice-fonts/MetaScOffcPro-NormIta.ttf}{
+\setmainfont{MetaOffcPro}[Path=metaoffice-fonts/,
 Extension=.ttf,
 UprightFont=*-Norm,
 UprightFeatures={
@@ -28,7 +29,7 @@ BoldFeatures={
 BoldItalicFont=*-Bold,
 BoldItalicFeatures={FakeSlant},
 ]
-\setsansfont{MetaOffcPro}[Path=fonts/,
+\setsansfont{MetaOffcPro}[Path=metaoffice-fonts/,
 Extension=.ttf,
 UprightFont=*-Norm,
 UprightFeatures={

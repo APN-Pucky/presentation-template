@@ -12,7 +12,8 @@ zu finden.
 
 [`main.pdf`](main.pdf)
 
-Und mit Notizen
+Und mit Notizen (für die Präsentation ist [pympress](https://github.com/Cimbali/pympress) empfehlenswert)
+
 
 [`main_notes.pdf`](main_notes.pdf)
 
@@ -30,5 +31,5 @@ Zur Verwendung der Vorlage wird die Schriftart „Meta Office Pro“ von FontFon
 - MetaScOffcPro-Norm.ttf
 - MetaScOffcPro-NormIta.ttf
 
-im Verzeichnis [`fonts/`](fonts/) abgelegt werden.
+im Verzeichnis [`metaoffice-fonts/`](metaoffice-fonts/) abgelegt werden.
 

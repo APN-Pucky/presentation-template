@@ -1,0 +1,3 @@
+[submodule "metaoffice-fonts"]
+	path = metaoffice-fonts
+	url = ../metaoffice-fonts
